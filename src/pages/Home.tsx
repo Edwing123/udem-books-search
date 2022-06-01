@@ -42,7 +42,7 @@ const HeroSection = () => {
                 Bienvenido a FakeBookSearch :)
             </Title>
 
-            <HeroImage src={heroImage} />
+            <HeroImage aria-hidden="true" onDragStart={(e) => e.preventDefault()} src={heroImage} />
         </div>
     )
 }
@@ -63,7 +63,7 @@ const InformationCardsSection = () => {
             css={{ columnGap: '$space$xl', margin: '$space$xl 0 7rem' }}
         >
             <Card>
-                <Title as="h3" size="md" css={{ marginBottom: '$space$sm' }}>
+                <Title as="h2" size="md" css={{ marginBottom: '$space$sm' }}>
                     Descubre nuevas experiencias
                 </Title>
                 <Paragraph>
@@ -72,7 +72,7 @@ const InformationCardsSection = () => {
             </Card>
 
             <Card>
-                <Title as="h3" size="md" css={{ marginBottom: '$space$sm' }}>
+                <Title as="h2" size="md" css={{ marginBottom: '$space$sm' }}>
                     respaldados por Google Books API
                 </Title>
                 <Paragraph>
@@ -82,7 +82,7 @@ const InformationCardsSection = () => {
             </Card>
 
             <Card>
-                <Title as="h3" size="md" css={{ marginBottom: '$space$sm' }}>
+                <Title as="h2" size="md" css={{ marginBottom: '$space$sm' }}>
                     Interfaz de usuario bonita
                 </Title>
                 <Paragraph>
