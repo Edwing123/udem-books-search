@@ -42,7 +42,7 @@ const HeroSection = () => {
                 Bienvenido a FakeBookSearch :)
             </Title>
 
-            <HeroImage aria-hidden="true" onDragStart={(e) => e.preventDefault()} src={heroImage} />
+            <HeroImage width="640" height="427" aria-hidden="true" onDragStart={(e) => e.preventDefault()} src={heroImage} />
         </div>
     )
 }

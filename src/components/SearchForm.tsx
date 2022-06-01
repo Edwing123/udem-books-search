@@ -13,7 +13,6 @@ const SearchTermInput = styled('input', {
     border: 'none',
     backgroundColor: 'hsl(0, 0%, 94%)',
 
-
     '&:focus': {
         outline: 'none',
         boxShadow: 'inset 0 0 4px hsl(0, 10%, 85%)',
@@ -68,8 +67,12 @@ const SearchForm = ({ onSearch }: SearchFormProps) => {
                 placeholder="Escribe algo..."
                 onChange={handleSearchTermInputOnChange}
             />
-            <SearchButton onClick={() => onSearch(searchTerm)}>
-                <MagnifyingGlassIcon />
+            <SearchButton
+                onClick={() => onSearch(searchTerm)}
+                aria-label="Buscar libros"
+                title="Buscar libros"
+            >
+                <MagnifyingGlassIcon aria-hidden="true" />
             </SearchButton>
         </SearchFormContainer>
     )

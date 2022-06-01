@@ -11,10 +11,10 @@ export const { styled, globalCss, css } = createStitches({
     theme: {
         colors: {
             blue: '#5800FF',
-            bluePale: '#deccff',
+            bluePale: '#eee6ff',
             green: '#36AE7C',
             greenDark: '#319d70',
-            greenPale: '#d7efe5',
+            greenPale: '#ebf7f2',
             white: 'hsl(0, 0%, 97%)',
 
             categoryPillBackgroundColor: 'hsl(0, 0%, 92%)',

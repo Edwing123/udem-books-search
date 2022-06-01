@@ -18,8 +18,8 @@ const Card = styled('article', {
 
     '&:is(:focus, :hover)': {
         outline: 'none',
-        transform: 'scale(1.1)'
-    }
+        transform: 'scale(1.1)',
+    },
 })
 
 const Thumbnail = styled('img', {
@@ -37,25 +37,28 @@ const InformationContainer = styled('div', {
     padding: '$space$sm',
 
     backgroundColor: 'hsl(0, 1%, 25%)',
-    color: '$white'
+    color: '$white',
 })
 
 const BookCard = ({ book }: BookCardProps) => {
     const {
-        volumeInfo: {
-            title,
-            imageLinks,
-            previewLink
-        },
+        volumeInfo: { title, imageLinks, previewLink },
     } = book
 
     const shortTitle = title.length < 40 ? title : title.substr(0, 37) + '...'
-    const thumbnail = imageLinks != undefined ? imageLinks?.thumbnail : fallbackImage
+    const thumbnail =
+        imageLinks != undefined ? imageLinks?.thumbnail : fallbackImage
 
     return (
         <Card title={title} tabIndex={0}>
             <a href={previewLink} rel="nofollow noreferrer" target="_blank">
-                <Thumbnail src={thumbnail} />
+                <Thumbnail
+                    src={thumbnail}
+                    width="128"
+                    height="173"
+                    aria-hidden="true"
+                    onDragStart={(e) => e.preventDefault()}
+                />
                 <InformationContainer>
                     <Title as="h3" size="xsm">
                         {shortTitle}
